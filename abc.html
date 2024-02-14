@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./abc.js"></script>
+
+    <style>
+        #select {
+            width: 20rem;
+            height: 2rem;
+            font-size: large;
+        }
+        
+        #api-key {
+            width: 40rem;
+            height: 2rem;
+        }
+
+        #textarea {
+            width: 100%;
+            height: 40%;
+            padding: 0.5rem;
+            margin: 0.5rem 0rem;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #444444;
+            padding: 10px;
+        }
+
+        #copy {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="select">
+        <option value="1" selected>사업자등록번호검색</option>
+        <option value="2">법인등록번호검색</option>
+        <option value="3">상호명검색</option>
+    </select>
+    <input id="api-key" value="bTkwMDZ5QHNoaW5zZWdhZS5jb20g" placeholder="api 키">
+    
+    <textarea id="textarea" placeholder=",로 구분된 검색어 목록">3988701116</textarea>
+
+    <button id="button">API 호출</button>
+
+    <hr />
+
+    <button id="copy">📋 테이블 내용 모두 복사하기(엑셀 붙여넣기용)</button>
+    <table id="table">
+        <thead>
+            <th>검색어</th>
+            <th>사업자등록번호</th>
+            <th>법인등록번호</th>
+            <th>회사명</th>
+            <th>사업자상태(코드)</th>
+            <th>사업자상태(명칭)</th>
+            <th>과세유형(코드)</th>
+            <th>과세유형(명칭)</th>
+            <th>폐업일</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+
+</html>
